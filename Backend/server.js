@@ -4,7 +4,7 @@ var routes = require('./routes/routes');
 var mongoose = require('mongoose');
 const cors = require('cors');
 
-mongoose.connect("mongodb://localhost:27017/est")
+mongoose.connect("mongodb+srv://vinitha:Password1@vinitha.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000")
     .then(() => {
         console.log("DB Connectedddd!!!!!!!!!!!");
         server.listen(8000, function check(error) {
