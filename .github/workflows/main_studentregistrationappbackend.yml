@@ -25,7 +25,6 @@ jobs:
         run: |
           cd Backend
           npm install
-          npm run build
           working-directory: Backend
       
       - name: Upload artifact for deployment job
