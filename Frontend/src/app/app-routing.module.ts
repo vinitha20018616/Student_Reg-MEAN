@@ -8,6 +8,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent }, // Define the route for the home page
   { path: 'register', component: StudentcrudComponent },
   { path: 'about', component: Page1Component},
+  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
