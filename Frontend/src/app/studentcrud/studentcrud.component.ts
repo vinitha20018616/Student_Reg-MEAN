@@ -21,7 +21,7 @@ export class StudentcrudComponent {
   }
 
   getAllStudent() {
-    this.http.get("http://localhost:8000/user/getAll").subscribe((resultData: any) => {
+    this.http.get("https://studentregistrationappbackend.azurewebsites.net/user/getAll").subscribe((resultData: any) => {
       console.log(resultData);
       this.StudentArray = resultData.data;
     });
@@ -40,17 +40,17 @@ export class StudentcrudComponent {
       "address": this.address,
       "phone": this.phone,
     };
-    this.http.patch("http://localhost:8000/user/update" + "/" + this.currentStudentID, bodyData).subscribe((resultData: any) => {
+    this.http.patch("https://studentregistrationappbackend.azurewebsites.net/user/update" + "/" + this.currentStudentID, bodyData).subscribe((resultData: any) => {
       console.log(resultData);
-      alert("Student Updateddd");
+      alert("Student Updated");
       this.getAllStudent();
     });
   }
 
   setDelete(data: any) {
-    this.http.delete("http://localhost:8000/user/delete" + "/" + data._id).subscribe((resultData: any) => {
+    this.http.delete("https://studentregistrationappbackend.azurewebsites.net/user/delete" + "/" + data._id).subscribe((resultData: any) => {
       console.log(resultData);
-      alert("Student Deletedddd");
+      alert("Student Deleted");
       this.getAllStudent();
     });
   }
@@ -69,7 +69,7 @@ export class StudentcrudComponent {
       "address": this.address,
       "phone": this.phone,
     };
-    this.http.post("http://localhost:8000/user/create", bodyData).subscribe((resultData: any) => {
+    this.http.post("https://studentregistrationappbackend.azurewebsites.net/user/create", bodyData).subscribe((resultData: any) => {
       console.log(resultData);
       alert("Student Registered Successfully");
       this.name = '';
