@@ -17,4 +17,4 @@ var userSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('employees', userSchema);
+module.exports = mongoose.model('students', userSchema);
